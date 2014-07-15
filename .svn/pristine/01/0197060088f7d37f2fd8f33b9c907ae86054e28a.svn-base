@@ -1,0 +1,8 @@
+[application_environment]
+application_environment = development
+
+[api]
+local = http://localhost:8200
+development = --
+staging = --
+production = --

@@ -1,0 +1,274 @@
+@import 'breakpoints';
+@import 'colors';
+@import 'fonts';
+@import 'icons';
+
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.align-center {
+    text-align: center;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear{
+    clear: both;
+}
+
+li {
+    list-style: none;
+}
+
+.info-btn{}
+
+.button(@bg, @color:white){
+    display: inline-block;
+    background-color: @bg;
+    color:@color;
+    height: 45px;
+    border:none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.insane-blue-btn {
+    .button(@blue);
+    position: relative;
+    height: 50px;
+    width: 230px;
+    font-size: 36px;
+    line-height: 50px;
+    color: white;
+    .title-font;
+}
+.blue-button{
+    .button(@blue);
+}
+
+.inner-shadow(@n1:0px;@n2:0px;@n3:3px;@color:#999999;@opacity:.1){
+    -moz-box-shadow:   @n1 @n2 @n3 @color inset;
+    -webkit-box-shadow: @n1 @n2 @n3 @color inset;
+    box-shadow:         @n1 @n2 @n3 @color inset;
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=0,MakeShadow=false,ShadowOpacity=@opacity);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=0,MakeShadow=false,ShadowOpacity=@{opacity})";
+}
+.shadow(@color:@whatGreyIsThisWhereAmI;@x:0;@y:0;@z:4px) {
+    -moz-box-shadow: @x @y @z @color;
+    -webkit-box-shadow: @x @y @z @color;
+    box-shadow: @x @y @z @color;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#333333')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=@lightGrey);
+}
+.opacity(@op) {
+    @opPercentage: @op * 100;
+    -moz-opacity: @op;
+    -khtml-opacity: @op;
+    opacity: @op;
+    .ie-opacity(@opPercentage);
+}
+.ie-opacity(@num){
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{num})";
+    filter: alpha(opacity=@num);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{num})";
+}
+.border{
+    .inner-shadow(2px; 5px; 25px; #666666);
+}
+.border-radius(@radius){
+    border-radius: @radius;
+}
+.scrollable{
+    overflow-y:scroll;
+}
+
+.box(@w,@h){
+    width:@w;
+    height:@h;
+}
+
+.repeat-item{
+    &.ng-enter,
+    &.ng-leave {
+        -webkit-transition:0.5s linear all;
+        transition:0.5s linear all;
+        position: relative;
+    }
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity:0;
+        top: -50px;
+    }
+    &.ng-leave,
+    &.ng-enter.ng-enter-active {
+        opacity:1;
+        top: 0;
+    }
+}
+.meter{
+    width:100%;
+    height:15px;
+    background-color:@mgray;
+    text-align: left;
+    .progress{
+        background-color:red;
+        height:100%;
+    }
+}
+.animate{
+    -webkit-transition: 0.8s ease all;
+    transition: 0.8s ease all;
+    &.ng-hide-add, &.ng-hide-remove {
+        display: block!important;
+    }
+    overflow:hidden;
+}
+.animate-fade(@opacity: 1){
+    .animate;
+    .opacity(@opacity);
+    &.ng-hide {
+        .opacity(0);
+    }
+}
+.animate-window{
+    .animate;
+    overflow:hidden;
+    &.ng-hide {
+        height:0px;
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.hide {
+    display: none;
+}
+.clearfix:after {
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+/** placeholder sizing */
+.placeholder {
+    overflow: hidden;
+    &.image {
+        text-align: center;
+        &.large {
+            width: 540px;
+            height: 540px;
+        }
+        &.catalog {
+            width: 280px;
+            height: 280px;
+        }
+        &.thumb {
+            width: 100px;
+            height: 100px;
+        }
+        &.very-small {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.button {
+    cursor: pointer;
+    .noselect;
+}
+button {
+    .button;
+}
+
+.la-menu {
+    overflow-y: scroll!important;
+    height:200px;
+    bottom:20px;
+    position: absolute;
+    background-color: white;
+    padding: 0 10px;
+    margin:0;
+    z-index: 1;
+
+    .shadow;
+    .animate-window;
+    li{
+        list-style: none;
+    }
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.centered {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+a, a:hover, a:focus, a:visited, a:active {
+    text-decoration: inherit;
+    color: inherit;
+    .button;
+}
+
+.timepiece {
+    .minutes, .seconds {
+        display: inline-block;
+    }
+    .d, .h, .m, .s, .days, .hours {
+        display: inline-block;
+    }
+}
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    .button;
+}
+
+.standard-width {
+    width: 1200px;
+    margin: auto;
+}
+.swidth {
+    .standard-width;
+}
+
+.la-button{
+    .vertical-gradient(white,#f7f7f7);
+    color:@mgray;
+    background-color: @btn-bg;
+    .shadow(@mgray,1px,1px,1px);
+}
