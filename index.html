@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='Home'>
     <head>
         <meta charset="utf-8">
-        <title>George Jing Fu</title>
+        <title>George J. Fu - The J is for because my middle name starts with J</title>
         <link rel="shortcut icon" href="/y/yakk.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src='External/scripts/jquery.js'></script>
         <script src='External/scripts/angular.js'></script>
 
-        <script src='Internal/application.min.js'></script>
-        <link href="Internal/application.min.css" rel="stylesheet">
+        <script src='Internal/index.js'></script>
+        <link href="Internal/styles/Bootstrap_custom.css" rel="stylesheet">
+        <link href="Internal/index.css" rel="stylesheet">
     </head>
-    <body class='container text-center'>
-        <div class='row baseball'>
-            <div class='col-lg-12'>
-                <p>You see a field over yonder.</p>
-                <div class='row'>
-                    <div class='col-lg-12'>
-                        <a href='/y'>Play Baseball</a>
+    <body class='container' ng-controller='IndexController'>
+        <div class='resume row'>
+            <div class='resume-container col-xs-12'>
+                <div class='' ng-repeat='pointer in pointers'>
+                    <div class='' ng-repeat='(k, v) in pointer' ng-if='k != "cat"'>
+                        <div class='topic {{ pointer.cat }}' ng-click='pointers.push(topics[k])'>{{ k }}</div>
+                        <br ng-if='pointer.cat == "main"'/>
                     </div>
                 </div>
             </div>
         </div>
-        <div class='resume row'>
-
-        </div>
-        <div class='row'>
+        <div class='row hide'>
             <div class='text-left journal col-lg-6'>
                 <h6>July 15th, 2014</h6>
                 <h5>As I once was</h5>
@@ -81,6 +79,16 @@
                     It was a careless time. I could figure out how to integrate a function on the imaginary plane, but I still have no idea
                     how this OAuth plugin works.
                 </p>
+                <div class='row baseball'>
+                    <div class='col-lg-12'>
+                        <p>You see a field over yonder.</p>
+                        <div class='row'>
+                            <div class='col-lg-12'>
+                                <a href='/y'>Play Baseball</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
