@@ -1,7 +1,0 @@
-@largest: 2020px;
-@larger: 1456px;
-@large: 1200px;
-@medium: 1024px;
-@small: 768px;
-@smaller: 480px;
-@smallest: 320px;

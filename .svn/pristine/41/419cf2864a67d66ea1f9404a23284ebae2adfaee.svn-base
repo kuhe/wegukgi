@@ -1,7 +1,0 @@
-@import 'styles/Bootstrap_custom.css';
-
-@import "styles/variables/breakpoints";
-@import "styles/variables/colors";
-@import "styles/variables/fonts";
-@import "styles/variables/icons";
-@import "styles/variables/main";
