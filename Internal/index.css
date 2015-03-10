@@ -1235,9 +1235,9 @@ a:active {
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#dfdfe1);
 }
 .parallelolol {
-  -webkit-transform: skew(-14deg);
-  -moz-transform: skew(-14deg);
-  -o-transform: skew(-14deg);
+  -webkit-transform: skew(-9deg);
+  -moz-transform: skew(-9deg);
+  -o-transform: skew(-9deg);
 }
 .resume-container {
   margin: 20px 0;
@@ -1251,6 +1251,27 @@ a:active {
   background: green;
   color: #ffff00;
 }
+.resume-container .pointer {
+  display: block;
+}
+.resume-container .pointer.depth1 {
+  margin-left: 3em;
+}
+.resume-container .pointer.depth2 {
+  margin-left: 6em;
+}
+.resume-container .pointer.depth3 {
+  margin-left: 8em;
+}
+.resume-container .pointer.depth4 {
+  margin-left: 10em;
+}
+.resume-container .topic-wrapper {
+  display: inline-block;
+}
+.resume-container .topic-wrapper.depth0 {
+  display: block;
+}
 .resume-container .topic {
   cursor: pointer;
   -webkit-touch-callout: none;
@@ -1262,15 +1283,19 @@ a:active {
   margin: 5px 5px;
   border: 1px solid grey;
   display: inline-block;
-  -webkit-transform: skew(-14deg);
-  -moz-transform: skew(-14deg);
-  -o-transform: skew(-14deg);
+  -webkit-transform: skew(-9deg);
+  -moz-transform: skew(-9deg);
+  -o-transform: skew(-9deg);
   height: 2em;
   width: auto;
   padding: 0 10px;
   text-align: center;
   font-size: 16px;
   line-height: 2em;
+}
+.resume-container .topic.selected {
+  border-left-width: 4px;
+  border-right-width: 4px;
 }
 pre {
   text-align: left;

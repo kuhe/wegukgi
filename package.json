@@ -1,16 +1,25 @@
 {
   "name": "wegukgi",
   "version": "1.0.0",
-  "description": "homepage",
-  "main": "index.js",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^1.1.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-watch": "^4.1.1",
+    "gulp": "^3.8.11",
+    "stream-combiner2": "^1.0.2",
+    "gulp-less": "^3.0.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/kuhe/wegukgi.git"
   },
-  "author": "",
+  "author": "George Fu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kuhe/wegukgi/issues"

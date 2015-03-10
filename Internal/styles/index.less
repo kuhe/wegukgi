@@ -1,7 +1,7 @@
 .parallelolol {
-    -webkit-transform: skew(-14deg);
-    -moz-transform: skew(-14deg);
-    -o-transform: skew(-14deg);
+    -webkit-transform: skew(-9deg);
+    -moz-transform: skew(-9deg);
+    -o-transform: skew(-9deg);
 }
 .resume-container {
     margin: 20px 0;
@@ -13,6 +13,33 @@
     .js {
         background: green;
         color: #ffff00;
+    }
+    .pointer {
+        display: block;
+        &.depth0 {
+        }
+        &.depth1 {
+            margin-left: 3em;
+        }
+        &.depth2 {
+            margin-left: 6em;
+        }
+        &.depth3 {
+            margin-left: 8em;
+        }
+        &.depth4 {
+            margin-left: 10em;
+        }
+    }
+    .topic-wrapper {
+        display: inline-block;
+        &.depth0 {
+            display: block;
+        }
+        &.depth1 {
+        }
+        &.depth2 {
+        }
     }
     .topic {
         .button;
@@ -26,7 +53,17 @@
         text-align: center;
         font-size: 16px;
         line-height: 2em;
-        &.main {
+        &.selected {
+            border-left-width: 4px;
+            border-right-width: 4px;
+        }
+        &.depth0 {
+
+        }
+        &.depth1 {
+
+        }
+        &.depth2 {
 
         }
     }

@@ -12,7 +12,12 @@ var observe = {
     styles : publicRoot + 'styles/**/*.less' // less files to watch
 };
 var source = {
-    scripts :  [publicRoot + 'scripts/**/*.js'], // the order to load your scripts
+    scripts :  [
+        publicRoot + 'scripts/namespace.js',
+        publicRoot + 'scripts/config/*.js',
+        publicRoot + 'scripts/Controllers/*.js',
+        publicRoot + 'scripts/home.js'
+    ], // the order to load your scripts
     styles : publicRoot + 'index.less' // your master LESS file
 };
 var compile = {
