@@ -17,6 +17,9 @@
         <div class='resume row'>
             <div class='resume-container col-xs-12'>
                 <div class='pointer {{ pointer.cat }} depth{{ pointer.depth }}' ng-repeat='pointer in pointers'>
+                    <div>
+                        {{ pointer.desc }}
+                    </div>
                     <div class='topic-wrapper {{ pointer.cat }} depth{{ pointer.depth }}'
                          ng-repeat='(k, v) in pointer'
                          ng-if='metadata.indexOf(k) === -1'>
@@ -27,6 +30,9 @@
                         </div>
                         <br ng-if='pointer.cat == "main"'/>
                     </div>
+                </div>
+                <div>
+                    {{ comment }}
                 </div>
             </div>
         </div>
