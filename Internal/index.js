@@ -71,7 +71,7 @@ Namespace.topics = {
             'Asynchronicity' : '',
             'Model View Controller' : '',
             'Dependency Injection' : '',
-            'Test Driven' : ''
+            'Test' : ''
         },
         'Object Orientation' : {
             'Access Modifiers' : '',
@@ -176,7 +176,6 @@ Namespace.IndexController = function($scope) { (function() {
         return typeof thing;
     };
     this.navigate = function(parent, child) {
-        console.log(parent, child);
         giraffe.comment = '';
         if (typeof child == 'string') {
             pointers[parent.depth] = parent;

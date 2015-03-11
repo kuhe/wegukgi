@@ -70,7 +70,7 @@ Namespace.topics = {
             'Asynchronicity' : '',
             'Model View Controller' : '',
             'Dependency Injection' : '',
-            'Test Driven' : ''
+            'Test' : ''
         },
         'Object Orientation' : {
             'Access Modifiers' : '',

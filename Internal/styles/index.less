@@ -3,9 +3,16 @@
     -moz-transform: skew(-9deg);
     -o-transform: skew(-9deg);
 }
+* {
+    transition: all 0.25s ease;
+}
 .resume-container {
     margin: 20px 0;
     padding: 10px 20px;
+
+    .terminal {
+        border-bottom-width: 2px;
+    }
     .php {
         background: mediumpurple;
         color: white;
@@ -43,28 +50,43 @@
     }
     .topic {
         .button;
-        margin: 5px 5px;
         border: 1px solid grey;
         display: inline-block;
         .parallelolol;
-        height: 2em;
         width: auto;
-        padding: 0 10px;
         text-align: center;
         font-size: 16px;
-        line-height: 2em;
+
+        margin: 4px 4px;
+        padding: 0 4px;
+        line-height: 1.4em;
+        height: 1.4em;
         &.selected {
-            border-left-width: 4px;
-            border-right-width: 4px;
+            background: #767676;
+            color: #ffffff;
+            border-left-width: 2px;
+            border-right-width: 2px;
+            margin: 5px 5px;
+            padding: 0 10px;
+            line-height: 2em;
+            height: 2em;
+        }
+        &.terminal {
+            .terminal;
         }
         &.depth0 {
-
+            margin: 5px 5px;
+            padding: 0 10px;
+            line-height: 2em;
+            height: 2em;
         }
         &.depth1 {
-
         }
         &.depth2 {
-
+        }
+        &.depth3 {
+        }
+        &.depth4 {
         }
     }
 }

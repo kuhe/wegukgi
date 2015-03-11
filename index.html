@@ -25,7 +25,7 @@
                          ng-if='metadata.indexOf(k) === -1'>
                         <div class='topic {{ pointer.cat }} depth{{ pointer.depth }}'
                              ng-click='navigate(pointer, v)'
-                             ng-class='{selected: pointers[v.depth] === v}'>
+                             ng-class='{selected: !!v && (pointers[v.depth] === v || comment === v), terminal: typeOf(v) == "string"}'>
                             {{ k }}
                         </div>
                         <br ng-if='pointer.cat == "main"'/>

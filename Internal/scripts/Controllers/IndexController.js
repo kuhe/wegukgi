@@ -22,7 +22,6 @@ Namespace.IndexController = function($scope) { (function() {
         return typeof thing;
     };
     this.navigate = function(parent, child) {
-        console.log(parent, child);
         giraffe.comment = '';
         if (typeof child == 'string') {
             pointers[parent.depth] = parent;
