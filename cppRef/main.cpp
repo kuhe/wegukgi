@@ -1,15 +1,17 @@
 #include <iostream>
-#include "Data Structures/Node.h"
+#include <string>
+#include "Algorithms/GreedyScheduler.h"
 
 using namespace std;
 
 int main() {
     cout << "Hello, World!" << endl;
 
-    Node<float> node;
+    GreedyScheduler gs;
+    string s = gs.solve();
 
-    cout << node.data;
+    cout << s;
 
-    // cin.get();
+//     cin.get();
     return 0;
 }
