@@ -12,6 +12,7 @@ public:
     static string filePath;
     vector<string> lines;
     vector<WeightedJob> jobs;
+    GreedyScheduler();
 
     string solve();
     void read();

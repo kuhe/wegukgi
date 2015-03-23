@@ -1,3 +1,4 @@
+#include <c++/iostream>
 #include "GreedyScheduler.h"
 #include "../Utilities/string_util.cpp"
 
@@ -9,13 +10,19 @@ string GreedyScheduler::filePath = "C:/wamp/www/github/wegukgi/cppRef/Data/algo2
 vector<string> lines;
 vector<WeightedJob> jobs;
 
+GreedyScheduler::GreedyScheduler() {
+
+}
+
 string GreedyScheduler::solve() {
     read();
-//    return lines.at(1);
+    // return lines.at(1);
     return to_string(jobs.at(0).length);
 };
 
 void GreedyScheduler::read() {
+    lines.reserve(10000); // let's pretend this helps
+    jobs.reserve(10000);
     ifstream readFile;
     readFile.open(filePath);
     if (readFile.is_open()) {
