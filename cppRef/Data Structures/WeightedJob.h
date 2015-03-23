@@ -13,6 +13,7 @@ public:
     WeightedJob();
     WeightedJob(int weight, int length);
     WeightedJob(string weight, string length);
+    static bool higherPriorityRatio(const WeightedJob& self, const WeightedJob& other);
     bool operator > (const WeightedJob& other) const;
     bool operator == (const WeightedJob& other) const;
     bool operator < (const WeightedJob& other) const;

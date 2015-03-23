@@ -13,21 +13,29 @@ vector<WeightedJob> jobs;
 GreedyScheduler::GreedyScheduler() {
 
 }
-
-string GreedyScheduler::solve() {
-    return to_string(read().sort().sum());
+string GreedyScheduler::solve(bool asRatio) {
+    string solution = to_string(read().sort(asRatio).sum());
+    return solution;
 };
-GreedyScheduler& GreedyScheduler::sort() {
-    struct higherPriority {
-        bool operator()(const WeightedJob& a,const WeightedJob& b) const {
-            return a > b;
-        }
-    };
-    std::sort(jobs.begin(), jobs.end(), higherPriority());
+GreedyScheduler& GreedyScheduler::sort(bool asRatio) {
+    if (asRatio) {
+        std::sort(jobs.begin(), jobs.end(), WeightedJob::higherPriorityRatio);
+    } else {
+        std::sort(jobs.begin(), jobs.end(), std::greater<WeightedJob>());
+    }
     return *this;
 };
-int GreedyScheduler::sum() {
-    return 0;
+double GreedyScheduler::sum() {
+    double sum = 0, runningTime = 0;
+    int n = 0;
+    for (auto &job : jobs) {
+        double completion = job.length + runningTime;
+        runningTime += job.length;
+        sum += (double) job.weight * completion;
+        n++;
+        if (n > 3) break;
+    }
+    return sum;
 };
 GreedyScheduler& GreedyScheduler::read() {
     lines.reserve(10000); // let's pretend this helps

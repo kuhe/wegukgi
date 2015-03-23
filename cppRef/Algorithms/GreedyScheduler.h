@@ -15,10 +15,10 @@ public:
 
     GreedyScheduler();
 
-    string solve();
+    string solve(bool asRatio = false);
     GreedyScheduler& read();
-    GreedyScheduler& sort();
-    int sum();
+    GreedyScheduler& sort(bool asRatio = false);
+    double sum();
 };
 
 
