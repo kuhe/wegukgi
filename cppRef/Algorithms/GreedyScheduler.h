@@ -1,4 +1,3 @@
-#include <string>
 #include <fstream>
 #include <vector>
 #include "../Data Structures/WeightedJob.h"
