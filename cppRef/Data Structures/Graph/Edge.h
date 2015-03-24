@@ -6,8 +6,6 @@
 
 using namespace std;
 
-class GraphNode;
-
 class Edge {
 public:
     int weight;
@@ -15,7 +13,7 @@ public:
     GraphNode& node2;
     Edge(GraphNode& node1, GraphNode& node2, int weight = 0);
     GraphNode& other(GraphNode& node);
-    bool contains(GraphNode& node) const;
+    bool contains(GraphNode& node);
     bool operator == (Edge const& edge);
 };
 

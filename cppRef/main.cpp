@@ -16,6 +16,7 @@ int main() {
 
     cout << "Weight - length: " + solution1 << endl;
     cout << "weight / length: " + solution2 << endl;
+    cout << "Prim's: " + solution3 << endl;
 
     cout << "Yay..." << endl;
     // cin.get();

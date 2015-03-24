@@ -15,7 +15,7 @@ GraphNode& Edge::other(GraphNode& node) {
     return node;
 };
 
-bool Edge::contains(GraphNode& node) const {
+bool Edge::contains(GraphNode& node) {
     return node1 == node || node2 == node;
 }
 

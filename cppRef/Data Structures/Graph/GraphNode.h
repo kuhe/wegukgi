@@ -8,8 +8,8 @@ using namespace std;
 
 class GraphNode {
 public:
-    vector<GraphNode> paths;
-    vector<Edge> edges;
+    vector<GraphNode*> paths;
+    vector<Edge*> edges;
     GraphNode& connect(Edge& edge);
     bool connects(Edge& edge);
     bool connects(GraphNode& node);

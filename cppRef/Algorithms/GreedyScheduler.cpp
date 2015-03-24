@@ -1,12 +1,9 @@
-#include <c++/iostream>
-#include <c++/bits/stl_algo.h>
 #include "GreedyScheduler.h"
-#include "../Utilities/string_util.cpp"
 
 using namespace string_util;
 
-string GreedyScheduler::filePath = "C:/xampp/htdocs/wegukgi/cppRef/Data/algo2_hw1_q1.txt";
-//string GreedyScheduler::filePath = "C:/wamp/www/github/wegukgi/cppRef/Data/algo2_hw1_q1.txt";
+//string GreedyScheduler::filePath = "C:/xampp/htdocs/wegukgi/cppRef/Data/algo2_hw1_q1.txt";
+string GreedyScheduler::filePath = "C:/wamp/www/github/wegukgi/cppRef/Data/algo2_hw1_q1.txt";
 vector<string> lines;
 vector<WeightedJob> jobs;
 

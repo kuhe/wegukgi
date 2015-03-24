@@ -1,5 +1,3 @@
-template <typename T>
-
 #include <sstream>
 #include <vector>
 
@@ -8,10 +6,5 @@ template <typename T>
 
 using namespace std;
 
-struct vector_util {
-//    bool inVector(vector<T>& v, const T& item) {
-//        return find(v.begin(), v.end(), item) != v.end());
-//    }
-};
 
 #endif //_CPPREF_VECTOR_UTIL_H_
