@@ -15,9 +15,13 @@ string Prim::solve() {
           find the minimum-weight edge, and transfer it to the tree.
       Repeat step 2 (until all vertices are in the tree).
     */
+
     for (auto &node : graph.nodes) {
         findMinEdgeFrom(*node);
     }
+
+    while(graph.edges.size() > 0) delete graph.edges.back(), graph.edges.pop_back();
+    while(graph.nodes.size() > 0) delete graph.nodes.back(), graph.nodes.pop_back();
 
     return to_string(treeCost);
 };
@@ -30,12 +34,17 @@ Edge& Prim::findMinEdgeFrom(GraphNode& node) {
     // todo segfault on this loop
 
     int n = 0;
+
     for (auto &edge : node.edges) {
-        cout << "i" + to_string(n++);
+        n++;
         if (!tree.contains(*edge)) {
-            if (edge_ref.weight <= (*minEdge_ptr).weight) {
+
+            int t1 = (*edge).weight;
+            int t2 = (*minEdge_ptr).weight;
+
+            if ((*edge).weight <= (*minEdge_ptr).weight && minEdge_ptr != edge) {
                 edgeFound = true;
-                minEdge_ptr = &edge_ref;
+                minEdge_ptr = edge;
             }
         }
     }
@@ -59,15 +68,15 @@ Prim& Prim::read() {
                 graph.nodes.reserve(nodeCount);
                 graph.edges.reserve((unsigned int) stoi(lineVector.at(1)));
                 for (int n = 1; n <= nodeCount; n++) {
-                    GraphNode graphNode;
-                    graph.nodes.push_back(&graphNode);
+                    GraphNode* node_ptr = new GraphNode();
+                    graph.nodes.push_back(node_ptr);
                 }
             } else {
                 int node1Id = stoi(lineVector.at(0)) - 1;
                 int node2Id = stoi(lineVector.at(1)) - 1;
                 int edgeWeight = stoi(lineVector.at(2));
-                Edge edge(*graph.nodes.at((unsigned int) node1Id), *graph.nodes.at((unsigned int) node2Id), edgeWeight);
-                graph.edges.push_back(&edge);
+                Edge* edge_ptr = new Edge(*graph.nodes.at((unsigned int) node1Id), *graph.nodes.at((unsigned int) node2Id), edgeWeight);
+                graph.edges.push_back(edge_ptr);
             }
         }
     }
