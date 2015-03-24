@@ -10,10 +10,12 @@ class GraphNode {
 public:
     vector<GraphNode> paths;
     vector<Edge> edges;
-    GraphNode& connect(GraphNode& node);
+    GraphNode& connect(Edge& edge);
     bool connects(Edge& edge);
     bool connects(GraphNode& node);
     bool operator == (GraphNode const& node);
+protected:
+    GraphNode& addNode(GraphNode& node);
 };
 
 

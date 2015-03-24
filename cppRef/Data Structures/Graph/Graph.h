@@ -10,7 +10,8 @@ using namespace std;
 class Graph { // undirected
 public:
     vector<GraphNode> nodes;
-    Graph& addEdge(GraphNode& a, GraphNode& b);
+    vector<Edge> edges;
+    Graph& addEdge(GraphNode& a, GraphNode& b, int edgeWeight);
     Graph& addEdge(Edge& edge);
     bool contains(GraphNode& node);
 };

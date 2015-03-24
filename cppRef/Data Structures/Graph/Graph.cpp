@@ -1,18 +1,26 @@
 #include "Graph.h"
 
-Graph& Graph::addEdge(GraphNode& a, GraphNode& b) {
+Graph& Graph::addEdge(GraphNode& a, GraphNode& b, int edgeWeight) {
     if (!contains(a)) {
         nodes.push_back(a);
     }
     if (!contains(b)) {
         nodes.push_back(b);
     }
-    a.connect(b);
-    b.connect(a);
+    Edge edge(a, b, edgeWeight);
+    a.connect(edge);
+    b.connect(edge);
+    edges.push_back(edge);
     return *this;
 };
 Graph& Graph::addEdge(Edge& edge) {
-
+    if (!contains(edge.node1)) {
+        nodes.push_back(edge.node1);
+    }
+    if (!contains(edge.node2)) {
+        nodes.push_back(edge.node2);
+    }
+    edges.push_back(edge);
     return *this;
 };
 

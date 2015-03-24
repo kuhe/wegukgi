@@ -14,6 +14,7 @@ public:
     GraphNode& node1;
     GraphNode& node2;
     Edge(GraphNode& node1, GraphNode& node2, int weight = 0);
+    GraphNode& other(GraphNode& node);
     bool contains(GraphNode& node) const;
     bool operator == (Edge const& edge);
 };
