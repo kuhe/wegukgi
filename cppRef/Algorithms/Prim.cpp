@@ -26,7 +26,7 @@ string Prim::solve() {
     bool test3 = e2 == &e;
 
     // todo boggle
-    
+
 //    bool test3 = n1.connects(n2);
 //    graph.addEdge(e);
 //    vector<Edge> test4 = graph.edges;
