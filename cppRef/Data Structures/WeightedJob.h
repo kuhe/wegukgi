@@ -1,12 +1,11 @@
 #ifndef _CPPREF_WEIGHTEDJOB_H_
 #define _CPPREF_WEIGHTEDJOB_H_
 
-#include "Node.h"
 #include <string>
 
 using namespace std;
 
-class WeightedJob : Node<int> {
+class WeightedJob {
 public:
     int weight;
     int length;
