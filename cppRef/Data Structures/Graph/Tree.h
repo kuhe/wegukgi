@@ -4,7 +4,7 @@
 #include "_graph_common.h"
 #include "Graph.h"
 
-class Tree : Graph {
+class Tree : public Graph {
 
 };
 

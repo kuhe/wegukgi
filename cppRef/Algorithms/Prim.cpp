@@ -3,20 +3,47 @@
 //string Prim::filePath = "C:/xampp/htdocs/wegukgi/cppRef/Data/algo2_hw1_q3_edges.txt";
 string Prim::filePath = "C:/wamp/www/github/wegukgi/cppRef/Data/algo2_hw1_q3_edges.txt";
 
-Prim::Prim(Graph graph) : graph(graph) {
+Prim::Prim(Graph graph, Tree tree) : graph(graph), tree(tree) {
 
 };
 string Prim::solve() {
     read();
 
-    bool test1 = graph.nodes.at(1).connects(graph.nodes.at(2));
-    bool test2 = graph.nodes.at(7).connects(graph.nodes.at(6));
-    bool test3 = graph.nodes.at(2).connects(graph.nodes.at(65));
-    bool test4 = graph.nodes.at(2).connects(graph.nodes.at(55));
+    /** Wikipedia:
+    * Initialize a tree with a single vertex, chosen arbitrarily from the graph.
+      Grow the tree by one edge: of the edges that connect the tree to vertices not yet in the tree,
+          find the minimum-weight edge, and transfer it to the tree.
+      Repeat step 2 (until all vertices are in the tree).
+    */
+    for (auto &node : graph.nodes) {
+        findMinEdgeFrom(*node);
+    }
 
-    int x = 5;
+    return to_string(treeCost);
+};
+Edge& Prim::findMinEdgeFrom(GraphNode& node) {
+    Edge*& minEdge_ptr = node.edges.at(0);
 
-    return "";
+    bool edgeFound = false;
+    Edge& edge_ref = *minEdge_ptr;
+
+    // todo segfault on this loop
+
+    int n = 0;
+    for (auto &edge : node.edges) {
+        cout << "i" + to_string(n++);
+        if (!tree.contains(*edge)) {
+            if (edge_ref.weight <= (*minEdge_ptr).weight) {
+                edgeFound = true;
+                minEdge_ptr = &edge_ref;
+            }
+        }
+    }
+    if (edgeFound) {
+        tree.edges.push_back(minEdge_ptr);
+        treeCost += (*minEdge_ptr).weight;
+    }
+    return *minEdge_ptr;
 };
 
 using namespace string_util;
@@ -33,14 +60,14 @@ Prim& Prim::read() {
                 graph.edges.reserve((unsigned int) stoi(lineVector.at(1)));
                 for (int n = 1; n <= nodeCount; n++) {
                     GraphNode graphNode;
-                    graph.nodes.push_back(graphNode);
+                    graph.nodes.push_back(&graphNode);
                 }
             } else {
                 int node1Id = stoi(lineVector.at(0)) - 1;
                 int node2Id = stoi(lineVector.at(1)) - 1;
                 int edgeWeight = stoi(lineVector.at(2));
-                Edge edge(graph.nodes.at((unsigned int) node1Id), graph.nodes.at((unsigned int) node2Id), edgeWeight);
-                graph.edges.push_back(edge);
+                Edge edge(*graph.nodes.at((unsigned int) node1Id), *graph.nodes.at((unsigned int) node2Id), edgeWeight);
+                graph.edges.push_back(&edge);
             }
         }
     }

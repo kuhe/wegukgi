@@ -1,6 +1,8 @@
 #include "_algo_common.h"
 #include "../Data Structures/Graph/_graph_common.h"
 #include "../Data Structures/Graph/Graph.h"
+#include "../Data Structures/Graph/Tree.h"
+
 
 #ifndef _CPPREF_PRIM_H_
 #define _CPPREF_PRIM_H_
@@ -11,11 +13,14 @@ class Prim {
 public:
     static string filePath;
 
-    Prim(Graph graph = Graph());
+    Prim(Graph graph = Graph(), Tree tree = Tree());
 
     Graph& graph;
+    Tree& tree;
+    double treeCost;
 
     string solve();
+    Edge& findMinEdgeFrom(GraphNode& node);
     Prim& read();
 };
 

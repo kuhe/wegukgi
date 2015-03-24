@@ -9,11 +9,12 @@ using namespace std;
 
 class Graph { // undirected
 public:
-    vector<GraphNode> nodes;
-    vector<Edge> edges;
+    vector<GraphNode*> nodes;
+    vector<Edge*> edges;
     Graph& addEdge(GraphNode& a, GraphNode& b, int edgeWeight);
     Graph& addEdge(Edge& edge);
     bool contains(GraphNode& node);
+    bool contains(Edge& edge);
 };
 
 
