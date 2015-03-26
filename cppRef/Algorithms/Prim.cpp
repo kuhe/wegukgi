@@ -1,7 +1,9 @@
 #include "Prim.h"
 
 //string Prim::filePath = "C:/xampp/htdocs/wegukgi/cppRef/Data/algo2_hw1_q3_edges.txt";
-string Prim::filePath = "C:/wamp/www/github/wegukgi/cppRef/Data/algo2_hw1_q3_edges.txt";
+//string Prim::filePath = "C:/wamp/www/github/wegukgi/cppRef/Data/algo2_hw1_q3_edges.txt";
+string Prim::filePath = "C:/www/wegukgi/cppRef/Data/algo2_hw1_q3_test.txt";
+
 
 Prim::Prim(Graph graph, Tree tree) : graph(graph), tree(tree) {
 
@@ -31,26 +33,20 @@ Edge& Prim::findMinEdgeFrom(GraphNode& node) {
     bool edgeFound = false;
     Edge& edge_ref = *minEdge_ptr;
 
-    // todo segfault on this loop
+    for (auto &edge : graph.edges) {
+        if (!tree.contains((*edge).other(node)) && !(tree.contains(*edge))) {
 
-    int n = 0;
-
-    for (auto &edge : node.edges) {
-        n++;
-        if (!tree.contains(*edge)) {
-
-            int t1 = (*edge).weight;
-            int t2 = (*minEdge_ptr).weight;
-
-            if ((*edge).weight <= (*minEdge_ptr).weight && minEdge_ptr != edge) {
+            if ((*edge).weight <= (*minEdge_ptr).weight) {
                 edgeFound = true;
                 minEdge_ptr = edge;
             }
         }
     }
     if (edgeFound) {
+        tree.nodes.push_back(&(*minEdge_ptr).other(node));
         tree.edges.push_back(minEdge_ptr);
         treeCost += (*minEdge_ptr).weight;
+        cout << "adding edge with weight " + to_string((*minEdge_ptr).weight) + "\n";
     }
     return *minEdge_ptr;
 };
@@ -71,10 +67,10 @@ Prim& Prim::read() {
                     GraphNode* node_ptr = new GraphNode();
                     graph.nodes.push_back(node_ptr);
                 }
-            } else {
+            } else if (lineVector.size() == 3) {
                 int node1Id = stoi(lineVector.at(0)) - 1;
                 int node2Id = stoi(lineVector.at(1)) - 1;
-                int edgeWeight = stoi(lineVector.at(2));
+                double edgeWeight = stod(lineVector.at(2));
                 Edge* edge_ptr = new Edge(*graph.nodes.at((unsigned int) node1Id), *graph.nodes.at((unsigned int) node2Id), edgeWeight);
                 graph.edges.push_back(edge_ptr);
             }

@@ -8,10 +8,10 @@ using namespace std;
 
 class Edge {
 public:
-    int weight;
+    double weight;
     GraphNode& node1;
     GraphNode& node2;
-    Edge(GraphNode& node1, GraphNode& node2, int weight = 0);
+    Edge(GraphNode& node1, GraphNode& node2, double weight = 0);
     GraphNode& other(GraphNode& node);
     bool contains(GraphNode& node);
     bool operator == (Edge const& edge);
