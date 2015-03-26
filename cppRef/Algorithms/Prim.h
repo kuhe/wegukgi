@@ -20,7 +20,7 @@ public:
     double treeCost;
 
     string solve();
-    Edge& findMinEdgeFrom(GraphNode& node);
+    Edge& findMinEdgesFrom(GraphNode* node);
     Prim& read();
 };
 

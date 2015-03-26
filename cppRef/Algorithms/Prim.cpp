@@ -1,8 +1,8 @@
 #include "Prim.h"
 
-//string Prim::filePath = "C:/xampp/htdocs/wegukgi/cppRef/Data/algo2_hw1_q3_edges.txt";
+string Prim::filePath = "C:/xampp/htdocs/wegukgi/cppRef/Data/algo2_hw1_q3_test.txt";
 //string Prim::filePath = "C:/wamp/www/github/wegukgi/cppRef/Data/algo2_hw1_q3_edges.txt";
-string Prim::filePath = "C:/www/wegukgi/cppRef/Data/algo2_hw1_q3_test.txt";
+//string Prim::filePath = "C:/www/wegukgi/cppRef/Data/algo2_hw1_q3_test.txt";
 
 
 Prim::Prim(Graph graph, Tree tree) : graph(graph), tree(tree) {
@@ -19,7 +19,7 @@ string Prim::solve() {
     */
 
     for (auto &node : graph.nodes) {
-        findMinEdgeFrom(*node);
+        findMinEdgesFrom(node);
     }
 
     while(graph.edges.size() > 0) delete graph.edges.back(), graph.edges.pop_back();
@@ -27,27 +27,44 @@ string Prim::solve() {
 
     return to_string(treeCost);
 };
-Edge& Prim::findMinEdgeFrom(GraphNode& node) {
-    Edge*& minEdge_ptr = node.edges.at(0);
-
-    bool edgeFound = false;
+Edge& Prim::findMinEdgesFrom(GraphNode* node) {
+    Edge*& minEdge_ptr = (*node).edges.at(0);
     Edge& edge_ref = *minEdge_ptr;
 
-    for (auto &edge : graph.edges) {
-        if (!tree.contains((*edge).other(node)) && !(tree.contains(*edge))) {
+    tree.nodes.push_back(node);
 
+    while (tree.nodes.size() < graph.nodes.size()) {
+        bool edgeFound = false;
+        vector<Edge*>* candidateEdges = new vector<Edge*>();
+        for (auto &edge : graph.edges) {
+            if (!tree.contains(*edge) and (tree.contains((*edge).node1) or tree.contains((*edge).node2))) {
+                if (!tree.contains((*edge).node1) or !tree.contains((*edge).node2)) {
+                    minEdge_ptr = edge;
+                    (*candidateEdges).push_back(edge);
+                }
+            }
+        }
+        for (auto &edge : *candidateEdges) {
             if ((*edge).weight <= (*minEdge_ptr).weight) {
                 edgeFound = true;
                 minEdge_ptr = edge;
+                if (tree.contains((*edge).node1)) {
+                    node = &(*edge).node2;
+                } else {
+                    node = &(*edge).node1;
+                }
             }
         }
+        delete candidateEdges;
+        if (edgeFound) {
+            tree.nodes.push_back(node);
+            tree.edges.push_back(minEdge_ptr);
+            treeCost += (*minEdge_ptr).weight;
+            //cout << "adding node with address " << static_cast<void*>(node) << endl;
+            //cout << "adding edge with weight " + to_string((*minEdge_ptr).weight) + "\n";
+        }
     }
-    if (edgeFound) {
-        tree.nodes.push_back(&(*minEdge_ptr).other(node));
-        tree.edges.push_back(minEdge_ptr);
-        treeCost += (*minEdge_ptr).weight;
-        cout << "adding edge with weight " + to_string((*minEdge_ptr).weight) + "\n";
-    }
+
     return *minEdge_ptr;
 };
 
