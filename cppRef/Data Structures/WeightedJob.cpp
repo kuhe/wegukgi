@@ -3,19 +3,19 @@
 WeightedJob::WeightedJob() {
 
 }
-WeightedJob::WeightedJob(int weight, int length) : weight(weight), length(length) {};
+WeightedJob::WeightedJob(double weight, double length) : weight(weight), length(length) {};
 WeightedJob::WeightedJob(string weight, string length) {
-    this->weight = stoi(weight); this->length = stoi(length);
+    this->weight = stod(weight); this->length = stod(length);
 }
 bool WeightedJob::higherPriorityRatio(const WeightedJob& self, const WeightedJob& other) {
     double ownPriority, otherPriority;
-    ownPriority = (double) self.weight / (double) self.length;
-    otherPriority = (double) other.weight / (double) other.length;
+    ownPriority = self.weight / self.length;
+    otherPriority = other.weight / other.length;
     return ownPriority > otherPriority;
 };
 bool WeightedJob::operator > (const WeightedJob& other) const {
-    int ownPriority = getPriority();
-    int otherPriority = other.getPriority();
+    double ownPriority = getPriority();
+    double otherPriority = other.getPriority();
     bool comparison = ownPriority > otherPriority;
     if (comparison) {
         return true;
@@ -31,6 +31,6 @@ bool WeightedJob::operator == (const WeightedJob& other) const {
 bool WeightedJob::operator < (const WeightedJob& other) const {
     return !(operator == (other)) && !(operator > (other));
 };
-int WeightedJob::getPriority() const {
+double WeightedJob::getPriority() const {
     return weight - length;
 }

@@ -7,16 +7,16 @@ using namespace std;
 
 class WeightedJob {
 public:
-    int weight;
-    int length;
+    double weight;
+    double length;
     WeightedJob();
-    WeightedJob(int weight, int length);
+    WeightedJob(double weight, double length);
     WeightedJob(string weight, string length);
     static bool higherPriorityRatio(const WeightedJob& self, const WeightedJob& other);
     bool operator > (const WeightedJob& other) const;
     bool operator == (const WeightedJob& other) const;
     bool operator < (const WeightedJob& other) const;
-    int getPriority() const;
+    double getPriority() const;
 };
 
 

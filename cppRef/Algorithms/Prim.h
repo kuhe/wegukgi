@@ -11,7 +11,8 @@ using namespace std;
 
 class Prim {
 public:
-    static string filePath;
+    const static string path;
+    const static string file;
 
     Prim(Graph graph = Graph(), Tree tree = Tree());
 

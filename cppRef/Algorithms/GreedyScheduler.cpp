@@ -2,17 +2,22 @@
 
 using namespace string_util;
 
-string GreedyScheduler::filePath = "C:/xampp/htdocs/wegukgi/cppRef/Data/algo2_hw1_q1_test.txt";
-//string GreedyScheduler::filePath = "C:/wamp/www/github/wegukgi/cppRef/Data/algo2_hw1_q1.txt";
-//string GreedyScheduler::filePath = "C:/www/wegukgi/cppRef/Data/algo2_hw1_q1.txt";
+//const string GreedyScheduler::path = "C:/xampp/htdocs/wegukgi/cppRef/Data/";
+const string GreedyScheduler::path = "C:/wamp/www/github/wegukgi/cppRef/Data/";
+//const string GreedyScheduler::path = "C:/www/wegukgi/cppRef/Data/";
+
+//const string GreedyScheduler::file = "algo2_hw1_q1_edges.txt";
+const string GreedyScheduler::file = "algo2_hw1_q1_test.txt";
+
+
 vector<string> lines;
 vector<WeightedJob> jobs;
 
 GreedyScheduler::GreedyScheduler() {
-
+    read();
 }
 string GreedyScheduler::solve(bool asRatio) {
-    string solution = to_string(read().sort(asRatio).sum());
+    string solution = to_string(sort(asRatio).sum());
     return solution;
 };
 GreedyScheduler& GreedyScheduler::sort(bool asRatio) {
@@ -25,13 +30,10 @@ GreedyScheduler& GreedyScheduler::sort(bool asRatio) {
 };
 double GreedyScheduler::sum() {
     double sum = 0, runningTime = 0;
-    int n = 0;
     for (auto &job : jobs) {
         double completion = job.length + runningTime;
         runningTime += job.length;
-        sum += (double) job.weight * completion;
-        n++;
-        if (n > 3) break;
+        sum += job.weight * completion;
     }
     return sum;
 };
@@ -39,7 +41,7 @@ GreedyScheduler& GreedyScheduler::read() {
     lines.reserve(10000); // let's pretend this helps
     jobs.reserve(10000);
     ifstream readFile;
-    readFile.open(filePath);
+    readFile.open(path + file);
     if (readFile.is_open()) {
         for (std::string line; std::getline(readFile, line); ) {
             lines.push_back(line);

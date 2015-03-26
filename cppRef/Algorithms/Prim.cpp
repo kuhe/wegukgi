@@ -1,8 +1,11 @@
 #include "Prim.h"
 
-string Prim::filePath = "C:/xampp/htdocs/wegukgi/cppRef/Data/algo2_hw1_q3_test.txt";
-//string Prim::filePath = "C:/wamp/www/github/wegukgi/cppRef/Data/algo2_hw1_q3_edges.txt";
-//string Prim::filePath = "C:/www/wegukgi/cppRef/Data/algo2_hw1_q3_test.txt";
+//const string Prim::path = "C:/xampp/htdocs/wegukgi/cppRef/Data/";
+const string Prim::path = "C:/wamp/www/github/wegukgi/cppRef/Data/";
+//const string Prim::path = "C:/www/wegukgi/cppRef/Data/";
+
+//const string Prim::file = "algo2_hw1_q3.txt";
+const string Prim::file = "algo2_hw1_q3_test.txt";
 
 
 Prim::Prim(Graph graph, Tree tree) : graph(graph), tree(tree) {
@@ -72,7 +75,7 @@ using namespace string_util;
 
 Prim& Prim::read() {
     ifstream readFile;
-    readFile.open(filePath);
+    readFile.open(path + file);
     if (readFile.is_open()) {
         for (std::string line; std::getline(readFile, line); ) {
             vector<string> lineVector = split(line, ' ');

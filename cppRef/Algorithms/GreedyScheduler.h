@@ -8,7 +8,8 @@ using namespace std;
 
 class GreedyScheduler {
 public:
-    static string filePath;
+    const static string path;
+    const static string file;
     vector<string> lines;
     vector<WeightedJob> jobs;
 
