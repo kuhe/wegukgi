@@ -4,8 +4,8 @@
 const string Prim::path = "C:/wamp/www/github/wegukgi/cppRef/Data/";
 //const string Prim::path = "C:/www/wegukgi/cppRef/Data/";
 
-//const string Prim::file = "algo2_hw1_q3.txt";
-const string Prim::file = "algo2_hw1_q3_test.txt";
+const string Prim::file = "algo2_hw1_q3_edges.txt";
+//const string Prim::file = "algo2_hw1_q3_test.txt";
 
 
 Prim::Prim(Graph graph, Tree tree) : graph(graph), tree(tree) {
