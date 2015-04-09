@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class GreedyScheduler {
+class GreedyScheduler : public Solver {
 public:
     const static string path;
     const static string file;

@@ -2,21 +2,31 @@
 #include <string>
 #include "Algorithms/GreedyScheduler.h"
 #include "Algorithms/Prim.h"
+#include "Algorithms/DistanceClustering.h"
 
 using namespace std;
 
 int main() {
     cout << "Hello, World!" << endl;
 
-    GreedyScheduler gs;
-    string solution1 = gs.solve();
-    string solution2 = gs.solve(true);
-    Prim prim;
-    string solution3 = prim.solve();
+    bool runLegacy = false;
 
-    cout << "Weight - length: " + solution1 << endl;
-    cout << "weight / length: " + solution2 << endl;
-    cout << "Prim's: " + solution3 << endl;
+    if (runLegacy) {
+        GreedyScheduler gs;
+        string solution1 = gs.solve();
+        cout << "Weight - length: " + solution1 << endl;
+
+        string solution2 = gs.solve(true);
+        cout << "weight / length: " + solution2 << endl;
+
+        Prim prim;
+        string solution3 = prim.solve();
+        cout << "Prim's: " + solution3 << endl;
+    }
+
+    DistanceClustering dc;
+    string solution4 = dc.solve();
+    cout << "Distance clustering: " + solution4 << endl;
 
     cout << "Yay..." << endl;
     // cin.get();
