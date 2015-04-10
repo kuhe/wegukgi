@@ -33,46 +33,50 @@ Namespace.topics = {
             'Object' : 'Tuna of the dirt. Ubiquitous, nutritious, and satisfying.',
             'Linked List' : 'A thing and a pointer',
             'Array' : {
+                'C++' : 'A vector',
                 'PHP' : 'Swiss army hammer of collection types.',
                 'Python' : 'Is Pepsi okay?',
                 'C#' : 'An actual array, so you\'re probably looking for a list.',
                 'JavaScript' : 'Where arrays and functions can have secret string keys because they\'re all objects.'
             },
             'Hash Table' : {
+                'C++' : 'eh...',
                 'desc' : 'The basis of cache keying, and the world economy.',
-                'PHP' : 'See "array"',
+                'PHP' : 'See "array" or "hammer"',
                 'Python' : 'Dictionaries',
                 'C#' : 'An actual hash table, so you\'re probably looking for a dictionary.',
                 'JavaScript' : 'Any and every object, including arrays & functions.'
             },
             'Stack' : 'Last on, first off.',
-            'Queue' : 'Invented by the British, like most things. First come first serve.',
+            'Queue' : '(British) First come first serve.',
             'Tree' : {
                 'desc' : 'A graph with a root and no circular paths.',
                 'Heap' : 'Ordered along any path.',
                 'Binary Search Tree' : 'Left is the opposite of right.'
             }
         },
-        'Patterns' : {
-            'Active Record' : '',
-            'Service Locator' : '',
-            'Data Mapper' : '',
-            'Caching' : '',
+        'Patterns & Principles' : {
+            'Active Record' : 'It practically writes itself!',
+            'Service Locator' : 'Inedible. I prefer the taste of DI.',
+            'Data Mapper' : 'Responsible nemesis to the brash joy of ActiveRecord',
+            'Caching' : 'Making a lot of money. Invalidation queues. Warm/Cool.',
             'Modularity' : {
-                'Separation of Concerns' : '',
-                'Single Responsibility Principle' : ''
+                'Separation of Concerns' : 'The fire in the attic will not affect the temperature of the fire in the living room.',
+                'Single Responsibility Principle' : 'You had, one job.'
             },
-            'Singleton' : '',
-            'Decorator' : '',
-            '(web) Front Controller' : '',
-            'REST Service' : '',
-            'Events' : '',
-            'Asynchronicity' : '',
-            'Model View Controller' : '',
-            'Dependency Injection' : '',
-            'Test' : ''
+            'Liskov substitution' : 'Children should be able to replace their parents after 20 years of hard schooling.',
+            'Singleton' : 'Only one turtle.',
+            'Decorator' : 'Kinda like a wrapper. Modifies functions.',
+            'Encapsulation' : 'You can\'t always get what you want.',
+            '(web) Front Controller' : 'Run, application, run.',
+            'REST Service' : 'Why PUT when you can PATCH',
+            'Asynchronicity' : 'Doing things in order, the hard way.',
+            'Model View Controller' : 'And 3 million service factories',
+            'Dependency Injection' : 'I need a thing that can do ...',
+            'Test' : 'Who tests the testers?'
         },
         'Object Orientation' : {
+            'desc' : 'The craft of organizing concepts into classes and the art of organizing ideas into nonsense',
             'Access Modifiers' : '',
             'Inheritance' : '',
             'Interface' : '',
@@ -88,18 +92,27 @@ Namespace.topics = {
             'Zend Framework 2': ''
         },
         'JavaScript' : {
-            'MooTools': '',
-            'jQuery' : '',
-            'AngularJS' : '',
-            'Node.js' : ''
+            'MooTools': 'Kinda dead, but still great!',
+            'jQuery' : 'Crisis of the infinite callback hell',
+            'AngularJS' : 'Now this is RAD for SPA.',
+            'Node.js' : 'Mysterious asynch issues in my WebStorm interpreter...'
         },
         'Python' : {
-            'Tornado' : ''
+            'desc' : 'List comprehensions and Multi-threa--- I mean processing',
+            'Tornado' : 'It\'s kinda like node.'
         },
-        'C#' : '',
-        'Java' : '',
-        'Ruby' : '',
-        'SQL' : '',
+        'C#' : {
+            '.NET' : 'All said a really nice bundle of tools. Damn your method capitalization though.'
+        },
+        'Java' : {
+            'Spring' : 'I know nothing about this.',
+            'Maven' : 'I know nothing about this.',
+            'Scala' : 'I know nothing about this.'
+        },
+        'Ruby' : {
+            'Rails' : 'Back in 2010 I could barely get this working in Ubuntu after 15 hours. Haven\'t touched it since.'
+        },
+        'SQL' : 'HEY JUDE SELECT FROM JOIN ON GROUP BY HAVING ORDER LIMIT',
         'HTML/CSS' : ''
     },
     'Software Tools' : {
