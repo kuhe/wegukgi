@@ -8,10 +8,4 @@
 
 using namespace std;
 
-class Item;
-class Edge;
-class GraphNode;
-class Tree;
-class Graph;
-
 #endif //_CPPREF_GRAPH_COMMON_H_

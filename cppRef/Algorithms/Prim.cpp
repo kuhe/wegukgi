@@ -1,8 +1,6 @@
 #include "Prim.h"
 
-//const string Prim::path = "C:/xampp/htdocs/wegukgi/cppRef/Data/";
-const string Prim::path = "C:/wamp/www/github/wegukgi/cppRef/Data/";
-//const string Prim::path = "C:/www/wegukgi/cppRef/Data/";
+const string Prim::path = Solver::programRoot() + "Data/";
 
 const string Prim::file = "algo2_hw1_q3_edges.txt";
 //const string Prim::file = "algo2_hw1_q3_test.txt";

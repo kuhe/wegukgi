@@ -2,9 +2,7 @@
 
 using namespace string_util;
 
-//const string GreedyScheduler::path = "C:/xampp/htdocs/wegukgi/cppRef/Data/";
-const string GreedyScheduler::path = "C:/wamp/www/github/wegukgi/cppRef/Data/";
-//const string GreedyScheduler::path = "C:/www/wegukgi/cppRef/Data/";
+const string GreedyScheduler::path = Solver::programRoot() + "Data/";
 
 const string GreedyScheduler::file = "algo2_hw1_q1.txt";
 //const string GreedyScheduler::file = "algo2_hw1_q1_test.txt";
