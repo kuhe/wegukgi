@@ -5,13 +5,15 @@
 #define CPPREF_DISJOINTSET_H
 
 template <typename T>
-class DisjointSet {
+class DisjointSetStructure {
 public:
     vector<Set<T>*> sets;
 
     Set<T>& find(T& element);
+    DisjointSetStructure& remove(Set<T>& set);
+    DisjointSetStructure& remove(Set<T>& a, Set<T>& b);
     Set<T> merge(Set<T>& a, Set<T>& b);
-    Set<T> make(T& element);
+    Set<T>& make(T& element);
 };
 
 
