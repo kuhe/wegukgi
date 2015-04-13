@@ -6,7 +6,6 @@
 #include "../Data Structures/Set/_set_common.h"
 #include "../Data Structures/Set/DisjointSetStructure.h"
 
-
 #ifndef _CPPREF_DISTANCECLUSTERING_H_
 #define _CPPREF_DISTANCECLUSTERING_H_
 
@@ -23,9 +22,14 @@ public:
     Tree tree;
     DisjointSetStructure<GraphNode> unionFind;
 
-    Tree& kruskal();
-    string solve();
-    DistanceClustering & read();
+    Tree& kruskal(int stopAt = 1);
+    string solve(int stopAt = 1);
+    DistanceClustering& read();
+    struct by_weight {
+        const bool operator() (const Edge* a, const Edge* b) {
+            return (*a).weight < (*b).weight;
+        }
+    };
 };
 
 

@@ -5,13 +5,13 @@ using namespace string_util;
 const string DistanceClustering::path = Solver::programRoot() + "Data/";
 
 const string DistanceClustering::file = "algo2_hw2_q1_clustering1.txt";
-//const string DistanceClustering::file = "algo2_hw1_q1_test.txt";
+//const string DistanceClustering::file = "algo2_hw2_q1_test.txt";
 
 DistanceClustering::DistanceClustering() {
-
+    read();
 }
 
-Tree& DistanceClustering::kruskal() {
+Tree& DistanceClustering::kruskal(int stopAt) {
     /**
     http://en.wikipedia.org/wiki/DistanceClustering%27s_algorithm
 
@@ -23,36 +23,59 @@ Tree& DistanceClustering::kruskal() {
     At the termination of the algorithm, the forest forms a minimum spanning forest of the graph. If the graph is
      connected, the forest has a single component and forms a minimum spanning tree.
      */
-    Set<Edge> mstEdges;
+    Set<Edge>* mstEdges_ptr = new Set<Edge>;
+    Set<Edge>& mstEdges = *mstEdges_ptr;
     for (auto &node : graph.nodes) {
         unionFind.make(*node);
     }
-    struct by_weight {
-        const bool operator() (const Edge* a, const Edge* b) {
-            return (*a).weight < (*b).weight;
-        }
-    };
+
     std::sort(graph.edges.begin(), graph.edges.end(), by_weight());
     for (auto &edge : graph.edges) {
-        if (unionFind.find((*edge).node1) != *&unionFind.find((*edge).node2)) {
+        Edge& edgeRef = *edge;
+        GraphNode& node1 = edgeRef.node1;
+        GraphNode& node2 = edgeRef.node2;
+
+        Set<GraphNode>& set1 = unionFind.find(node1);
+        Set<GraphNode>& set2 = unionFind.find(node2);
+
+        if (set1 != set2) {
             mstEdges.add(*edge);
-            unionFind.merge(unionFind.find((*edge).node1), unionFind.find((*edge).node2));
+            unionFind.merge(unionFind.find(node1), unionFind.find(node2));
+        }
+
+        if (unionFind.sets.size() <= stopAt) {
+            break;
         }
     }
+
     for (auto &edge : mstEdges.elements) {
         tree.addEdge(*edge);
     }
+    delete mstEdges_ptr;
     return tree;
 }
 
-string DistanceClustering::solve() {
-    kruskal();
+/**
+ * For our particular solution, it is equivalent to stopping Kruskal's at K disjoint sets remaining.
+ */
+string DistanceClustering::solve(int stopAt) {
+    kruskal(stopAt);
+    std::sort(graph.edges.begin(), graph.edges.end(), by_weight());
 
-    return "";
+    if (tree.edges.size() > 0) {
+        for (auto &edge : graph.edges) {
+            if (unionFind.find((*edge).node1) != unionFind.find((*edge).node2)) {
+                return to_string((*edge).weight);
+            }
+        }
+    }
+    return "Uh oh";
 }
+
 DistanceClustering &DistanceClustering::read() {
     ifstream readFile;
     readFile.open(path + file);
+
     if (readFile.is_open()) {
         for (std::string line; std::getline(readFile, line); ) {
             vector<string> lineVector = split(line, ' ');

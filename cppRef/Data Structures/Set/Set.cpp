@@ -23,5 +23,6 @@ bool Set<T>::operator != (Set<T> const& set) {
     return !this->operator==(set);
 };
 
+
 template class Set<GraphNode>;
 template class Set<Edge>;

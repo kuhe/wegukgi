@@ -2,18 +2,14 @@
 
 template <typename T>
 Set<T>& DisjointSetStructure<T>::find(T& element) {
-    for (auto &set : sets) {
-        Set<T>& ref = *set;
-        if (ref.contains(element)) return ref;
-    }
-    Set<T> error;
-    Set<T>& errorRef = error;
-    return errorRef;
+    return *parents[&element];
 }
 
 template <typename T>
 DisjointSetStructure<T>& DisjointSetStructure<T>::remove(Set<T>& set) {
-    sets.erase(std::remove(sets.begin(), sets.end(), &set));
+    Set<T>* ptr = &set;
+    sets.erase(std::remove(sets.begin(), sets.end(), ptr));
+    delete ptr;
     return *this;
 }
 
@@ -26,25 +22,29 @@ DisjointSetStructure<T>& DisjointSetStructure<T>::remove(Set<T>& a, Set<T>& b) {
 
 template <typename T>
 Set<T> DisjointSetStructure<T>::merge(Set<T>& a, Set<T>& b) {
-    Set<T> set;
+    Set<T>* set_ptr = new Set<T>;
+    Set<T>& set = *set_ptr;
     for (auto &element : a.elements) {
+        parents[element] = set_ptr;
         set.add(*element);
     }
     for (auto &element : b.elements) {
+        parents[element] = set_ptr;
         set.add(*element);
     }
     remove(a, b);
+    sets.push_back(set_ptr);
     return set;
 }
 
 template <typename T>
 Set<T>& DisjointSetStructure<T>::make(T& element) {
-    Set<T> set;
+    Set<T>* ptr = new Set<T>;
+    Set<T>& set = *ptr;
     set.add(element);
-    Set<T>* ptr;
+    parents[&element] = ptr;
     sets.push_back(ptr);
-    Set<T>& setRef = set;
-    return setRef;
+    return set;
 }
 
 template class DisjointSetStructure<GraphNode>;

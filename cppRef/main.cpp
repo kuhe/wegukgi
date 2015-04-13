@@ -25,7 +25,7 @@ int main() {
     }
 
     DistanceClustering dc;
-    string solution4 = dc.solve();
+    string solution4 = dc.solve(4);
     cout << "Distance clustering: " + solution4 << endl;
 
     cout << "Yay..." << endl;

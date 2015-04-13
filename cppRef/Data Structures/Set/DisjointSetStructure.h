@@ -9,9 +9,12 @@ class DisjointSetStructure {
 public:
     vector<Set<T>*> sets;
 
+    map<T*, Set<T>*> parents;
+
     Set<T>& find(T& element);
     DisjointSetStructure& remove(Set<T>& set);
     DisjointSetStructure& remove(Set<T>& a, Set<T>& b);
+
     Set<T> merge(Set<T>& a, Set<T>& b);
     Set<T>& make(T& element);
 };
