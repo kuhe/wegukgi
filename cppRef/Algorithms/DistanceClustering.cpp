@@ -7,8 +7,10 @@ const string DistanceClustering::path = Solver::programRoot() + "Data/";
 const string DistanceClustering::file = "algo2_hw2_q1_clustering1.txt";
 //const string DistanceClustering::file = "algo2_hw2_q1_test.txt";
 
+const string DistanceClustering::file2 = "algo2_hw2_q1_clustering_big.txt";
+
 DistanceClustering::DistanceClustering() {
-    read();
+
 }
 
 Tree& DistanceClustering::kruskal(int stopAt) {
@@ -59,7 +61,7 @@ Tree& DistanceClustering::kruskal(int stopAt) {
  * For our particular solution, it is equivalent to stopping Kruskal's at K disjoint sets remaining.
  */
 string DistanceClustering::solve(int stopAt) {
-    kruskal(stopAt);
+    read().kruskal(stopAt);
     std::sort(graph.edges.begin(), graph.edges.end(), by_weight());
 
     if (tree.edges.size() > 0) {
@@ -70,6 +72,27 @@ string DistanceClustering::solve(int stopAt) {
         }
     }
     return "Uh oh";
+}
+
+vector<int> DistanceClustering::hamming1Xor() {
+    vector<int> container;
+    for (int i = 0; i < )
+}
+
+vector<int> DistanceClustering::hamming1Xor() {
+
+}
+
+string DistanceClustering::solveHamming() {
+    readHamming();
+    int candidateNodeCount = 200000;
+    for (auto &node : hammingNodes) {
+        vector<int> hamming2, hamming1;
+        for (auto &one : hamming1Xor()) {
+
+        }
+    }
+    return "";
 }
 
 DistanceClustering &DistanceClustering::read() {
@@ -94,6 +117,21 @@ DistanceClustering &DistanceClustering::read() {
                 Edge* edge_ptr = new Edge(*graph.nodes.at((unsigned int) node1Id), *graph.nodes.at((unsigned int) node2Id), edgeWeight);
                 graph.edges.push_back(edge_ptr);
             }
+        }
+    }
+    return *this;
+}
+
+DistanceClustering &DistanceClustering::readHamming() {
+    ifstream readFile;
+    readFile.open(path + file2);
+
+    if (readFile.is_open()) {
+        for (string line; getline(readFile, line); ) {
+            vector<string> lineVector = split(line, ' ');
+            char binary = stoi(string_util::join(lineVector));
+            hammingMap[binary] = binary;
+            hammingNodes.push_back(binary);
         }
     }
     return *this;
