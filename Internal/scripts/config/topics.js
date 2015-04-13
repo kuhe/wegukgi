@@ -2,7 +2,7 @@ Namespace.topics = {
     cat : 'main',
     'Software Engineering' : {
         'Mathematics' : {
-            'desc' : 'Rutgers \'09. About 20 pounds ago. With rigor, my friends.',
+            'desc' : 'Rutgers \'09. With rigor, my friends.',
             '=' : 'Is not to be used for assignment or in place of the word \'is\' in a sentence.',
             'Real Analysis' : 'Puts the capital M in STEM. Core competency like CS data structures.',
             'Complex Analysis' : 'I think I had dreamt the whole ordeal.',
@@ -25,7 +25,9 @@ Namespace.topics = {
             'Dijkstra\'s Pathfinder' : 'Always gets lost and always finds its way. BFS tentative distance via summation.',
             'Tarjan\'s Strong Connections' : 'Won\'t help you get into office. DFS that looks for circles.',
             'Garbage Collection' : 'Vital cornerstone of modern civilization and high level languages.',
-            'Compiler Optimizations' : 'You could say that I trust you implicitly.'
+            'Compiler Optimizations' : 'You could say that I trust you implicitly.',
+            'Prim\'s Tree' : 'Annexation of the weakest neighboring countries one at a time',
+            'Kruskal\'s Tree' : 'MST via union find'
         },
         'Data and its Structures' : {
             'Memory' : 'RAM, that is. Holds your stuff! Becomes amnesic when you power off.',
@@ -33,15 +35,15 @@ Namespace.topics = {
             'Object' : 'Tuna of the dirt. Ubiquitous, nutritious, and satisfying.',
             'Linked List' : 'A thing and a pointer',
             'Array' : {
-                'C++' : 'A vector',
+                'C++' : 'Some kind of mythical engine for vectors that I\'ve never seen directly',
                 'PHP' : 'Swiss army hammer of collection types.',
                 'Python' : 'Is Pepsi okay?',
                 'C#' : 'An actual array, so you\'re probably looking for a list.',
                 'JavaScript' : 'Where arrays and functions can have secret string keys because they\'re all objects.'
             },
             'Hash Table' : {
-                'C++' : 'eh...',
                 'desc' : 'The basis of cache keying, and the world economy.',
+                'C++' : 'eh... oh, a map!',
                 'PHP' : 'See "array" or "hammer"',
                 'Python' : 'Dictionaries',
                 'C#' : 'An actual hash table, so you\'re probably looking for a dictionary.',
@@ -70,31 +72,38 @@ Namespace.topics = {
             'Encapsulation' : 'You can\'t always get what you want.',
             '(web) Front Controller' : 'Run, application, run.',
             'REST Service' : 'Why PUT when you can PATCH',
-            'Asynchronicity' : 'Doing things in order, the hard way.',
+            'Asynchronicity' : 'Doing things synchronously, the hard way.',
             'Model View Controller' : 'And 3 million service factories',
             'Dependency Injection' : 'I need a thing that can do ...',
-            'Test' : 'Who tests the testers?'
+            'Test' : 'Who tests the testers?',
+            'Bitwise XOR' : '^_^ flipping bits for a living'
         },
         'Object Orientation' : {
-            'desc' : 'The craft of organizing concepts into classes and the art of organizing ideas into nonsense',
-            'Access Modifiers' : '',
-            'Inheritance' : '',
-            'Interface' : '',
-            'Abstract' : '',
-            'Static' : '',
-            'Collections' : '',
-            'Polymorphism' : ''
+            'desc' : 'The organizing of concepts into classes whose names end with FactoryFactory',
+            'Access Modifiers' : 'Default: public/nonexistent in many languages, package in Java, private in C++',
+            'Inheritance' : 'The parent class is still alive afterward.',
+            'Interface' : 'Contains your hopes and dreams of your software program',
+            'Abstract' : 'Like communism, cannot be directly instantiated',
+            'Static' : 'A possibly dynamic -_- field, but refers to class rather than instance properties/methods. Also the wonderful late static binding keyword in PHP',
+            'Collections' : 'When you get behind on those credit lines',
+            'Polymorphism' : 'Sheep, penguins, and turtles. Overloading, generics, and accepting of parametric subtypes.'
         }
     },
     'Software Languages' : {
+        'C++' : {
+            'desc' : 'As a web developer, why did I even try to learn this? It\'s a lovable and punishing language.',
+            'GCC C++11' : 'Thank you for "auto"'
+        },
         'PHP' : {
-            'Zend Framework 1': '',
-            'Zend Framework 2': ''
+            'desc' : 'It gets better!',
+            'Zend Framework 1': 'My first (2nd) MVC :D',
+            'Zend Framework 2': 'Livin\' the easy life'
         },
         'JavaScript' : {
+            'desc' : 'Now in one billion flavors',
             'MooTools': 'Kinda dead, but still great!',
-            'jQuery' : 'Crisis of the infinite callback hell',
-            'AngularJS' : 'Now this is RAD for SPA.',
+            'jQuery' : 'Callback hell aside, JS made accessible to everyone',
+            'AngularJS' : 'RAD SPA, really like the binding and model',
             'Node.js' : 'Mysterious asynch issues in my WebStorm interpreter...'
         },
         'Python' : {
@@ -113,35 +122,36 @@ Namespace.topics = {
             'Rails' : 'Back in 2010 I could barely get this working in Ubuntu after 15 hours. Haven\'t touched it since.'
         },
         'SQL' : 'HEY JUDE SELECT FROM JOIN ON GROUP BY HAVING ORDER LIMIT',
-        'HTML/CSS' : ''
+        'HTML/CSS' : 'Pretty sensible stuff right up to wacky z-index stacking, browser differences, and IE8'
     },
     'Software Tools' : {
         'Package Managers/VCS' : {
             'Git' : {
-                'Git Flow' : ''
+                'desc' : 'rite of passage: being trapped in merge resolution and never seen again',
+                'Git Flow' : 'good naming conventions hotfix/feature and observations about release cycles'
             },
-            'Subversion' : '',
-            'Mercurial': '',
-            'Node Package Manager': '',
-            'Composer' : ''
+            'Subversion' : 'rite of passage: merge failing in strange ways',
+            'Mercurial': 'rite of passage: accidentally creating a new history',
+            'Node Package Manager': 'install gulp',
+            'Composer' : 'the autoloader generation is good'
         },
         'Test Automation' : {
-            'Protractor' : '',
-            'Jasmine' : '',
-            'TeamCity' : '',
-            'PHPUnit' : '',
-            'MSTest' : ''
+            'Protractor' : 'for AngularJS',
+            'Jasmine' : 'to be and not to be',
+            'TeamCity' : 'Better your CPU time than mine',
+            'PHPUnit' : 'with PHPStorm integration, life is easy',
+            'MSTest' : 'Yay'
         },
         'Frontend Build Automation' : {
-            'Gulp' : '',
-            'Grunt' : ''
+            'Gulp' : 'I prefer LESS and not using strict JS to be honest',
+            'Grunt' : 'Obsolesced by gulp in my workflow, unfortunately'
         },
-        'Cloud' : ''
+        'Cloud' : 'namely AWS. Never really looked into Azure'
     },
     'Development Environment' : {
-        'JetBrains' : '',
-        'Microsoft' : '',
-        'Unix' : ''
+        'JetBrains' : 'Heroes of our cause',
+        'Microsoft' : 'Not as bad as the rumors and jests of the open source world said',
+        'Ubuntu' : 'Easily download any software you want as long as you want the version from 6 years ago. Also a good lesson in bash.'
     },
     'Project Management' : {
         'Agile' : '',
