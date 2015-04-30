@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Prim {
+class Prim : public Solver {
 public:
     const static string path;
     const static string file;

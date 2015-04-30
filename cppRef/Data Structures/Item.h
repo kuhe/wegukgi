@@ -1,12 +1,12 @@
 template <typename T>
 
-class Node {
+class Item {
 public:
     T data;
-    Node() {
+    Item() {
 
     };
-    Node(T d) {
+    Item(T d) {
         data = d;
     };
 };

@@ -25,8 +25,12 @@ int main() {
     }
 
     DistanceClustering dc;
-    string solution4 = dc.solve();
+    string solution4 = dc.solve(4);
     cout << "Distance clustering: " + solution4 << endl;
+
+    DistanceClustering dc2;
+    string solution5 = dc2.solveHamming();
+    cout << "Large Hamming cluster: " + solution5 << endl;
 
     cout << "Yay..." << endl;
     // cin.get();
