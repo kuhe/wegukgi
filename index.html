@@ -26,11 +26,11 @@
             </div>
         </div>
         <div class='resume row'>
-            <h4>The Mostly Correct Glossary of Terms</h4>
+            <h4>The Partially Correct Glossary of Terms</h4>
             <div class='resume-container col-xs-12'>
                 <div class='pointer {{ pointer.cat }} depth{{ pointer.depth }}' ng-repeat='pointer in pointers'>
                     <div>
-                        {{ pointer.desc }}
+                        {{ typeOf(pointer) == 'string' ? pointer : pointer.desc }}
                     </div>
                     <div class='topic-wrapper {{ pointer.cat }} depth{{ pointer.depth }}'
                          ng-repeat='(k, v) in pointer'

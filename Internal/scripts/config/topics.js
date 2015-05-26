@@ -31,9 +31,10 @@ Namespace.topics = {
         },
         'Data and its Structures' : {
             'Memory' : 'RAM, that is. Holds your stuff! Becomes amnesic when you power off.',
-            'Pointer' : 'A reference to a memory location.',
+            'Pointer' : 'A memory address',
+            'Reference' : 'A constant pointer with automatic dereferencing, I think',
             'Object' : 'Tuna of the dirt. Ubiquitous, nutritious, and satisfying.',
-            'Linked List' : 'A thing and a pointer',
+            'Linked List' : 'A thing and a pointer/reference to another thing',
             'Array' : {
                 'C++' : 'Some kind of mythical engine for vectors that I\'ve never seen directly',
                 'PHP' : 'Swiss army hammer of collection types.',
@@ -121,7 +122,8 @@ Namespace.topics = {
         'Ruby' : {
             'Rails' : 'Back in 2010 I could barely get this working in Ubuntu after 15 hours. Haven\'t touched it since.'
         },
-        'SQL' : 'HEY JUDE SELECT FROM JOIN ON GROUP BY HAVING ORDER LIMIT',
+        'SQL' : 'HEY JUDE, SELECT FROM JOIN, ON GROUP BY HAVING, ORDER LIMIT. ' +
+            'DEALLOCATE, IF REPLICATE MODIFY, THEN PREPARE DISCONNECT COMMIT CONTINUE',
         'HTML/CSS' : 'Pretty sensible stuff right up to wacky z-index stacking, browser differences, and IE8'
     },
     'Software Tools' : {
@@ -146,7 +148,7 @@ Namespace.topics = {
             'Gulp' : 'I prefer LESS and not using strict JS to be honest',
             'Grunt' : 'Obsolesced by gulp in my workflow, unfortunately'
         },
-        'Cloud' : 'namely AWS. Never really looked into Azure'
+        'Cloud' : 'namely AWS. Haven\'t really looked into Azure or AppEngine yet'
     },
     'Development Environment' : {
         'JetBrains' : 'Heroes of our cause',
@@ -154,10 +156,10 @@ Namespace.topics = {
         'Ubuntu' : 'Easily download any software you want as long as you want the version from 6 years ago. Also a good lesson in bash.'
     },
     'Project Management' : {
-        'Agile' : '',
-        'Team' : '',
-        'Code Review' : '',
-        'Standardization' : ''
+        'Agile' : 'Animal Farm',
+        'Team' : 'Mr. Baseball',
+        'Code Review' : 'I noticed you have a variable named Giraffe and a class named SeldonPlan',
+        'Standardization' : 'My way or the highway, and for good reason'
     }
     //'Other' : {
     //    'Sports' : {
