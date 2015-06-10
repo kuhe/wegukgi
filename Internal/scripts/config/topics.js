@@ -183,7 +183,7 @@ Namespace.topics = {
         'JetBrains' : 'Heroes of our cause. The recent CLion is also a great boon.',
         'Microsoft' : 'Windows/VS/SQLSRV/IIS Now the good guys again.',
         'Ubuntu' : 'Easily download any software you want as long as you want the version from 6 years ago. Also a good lesson in terminal.',
-        'Apple' : 'I can\'t understand or use effectively anything made by this company.'
+        'Apple' : 'I\'m terrible with all their devices/UI, but they look shiny. At least there\'s a terminal.'
     },
     ' Project Management' : {
         desc: 'Cat-herding has a proud tradition of futility',
