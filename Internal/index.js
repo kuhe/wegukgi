@@ -1,7 +1,7 @@
 var Namespace = {};
 Namespace.topics = {
     cat : 'main',
-    'Software Engineering' : {
+    '  Software Engineering' : {
         desc : 'The creation of software to avenge one\'s parents.',
         'Mathematics' : {
             'desc' : 'Rutgers \'09. With rigor, my friends.',
@@ -17,7 +17,7 @@ Namespace.topics = {
             }
         },
         'Algorithms' : {
-            desc : 'Traditional folk music from the land of Algoria, played quickly in the key of C major',
+            desc : 'Traditional folk music from the land of Algoria, played briskly in the key of C major',
             'Time Complexity' : 'Equivalent to how much computing power needed when that is a constant.',
             'Space Complexity' : 'Memory storage needs.',
             'Recurrence Relation' : 'Defines a series of values with one equation.',
@@ -113,7 +113,7 @@ Namespace.topics = {
             'Polymorphism' : 'Sheep, penguins, and turtles. Overloading, generics, and accepting of parametric subtypes.'
         }
     },
-    'Software Languages' : {
+    '  Software Languages' : {
         'C++' : {
             'desc' : 'As a web developer, why did I even try to learn this? It\'s a lovable and punishing language.',
             'GCC C++11' : 'Thank you for "auto"'
@@ -153,7 +153,7 @@ Namespace.topics = {
             'DEALLOCATE, IF REPLICATE MODIFY, THEN PREPARE DISCONNECT COMMIT CONTINUE',
         'HTML/CSS' : 'Pretty sensible stuff right up to wacky z-index stacking, browser differences, and IE8'
     },
-    'Software Tools' : {
+    '  Software Tools' : {
         'Package Managers/VCS' : {
             'Git' : {
                 'desc' : 'rite of passage: being trapped in merge resolution and never seen again, detached head state',
@@ -179,14 +179,14 @@ Namespace.topics = {
         },
         'Cloud' : 'namely AWS. Haven\'t really looked into Azure or AppEngine yet'
     },
-    'Development Environment' : {
+    ' Development Environment' : {
         'Cygwin' : 'Linuxify your Windows a bit.',
         'JetBrains' : 'Heroes of our cause. The recent CLion is also a great boon.',
         'Microsoft' : 'Windows/VS/SQLSRV/IIS Now the good guys again.',
         'Ubuntu' : 'Easily download any software you want as long as you want the version from 6 years ago. Also a good lesson in terminal.',
         'Apple' : 'I can\'t understand or use effectively anything made by this company.'
     },
-    'Project Management' : {
+    ' Project Management' : {
         desc: 'Cat-herding has a proud tradition of futility',
         'Agile' : 'Animal Farm',
         'Team' : 'Mr. Baseball',
@@ -202,10 +202,10 @@ Namespace.topics = {
         },
         'Histories' : {
             desc: 'The study of eagles. Dulce et decorum est...',
-            'Roman' : 'Eagles',
-            'Napoleonic' : 'Vive! l\'Em! p\'reur! More eagles',
-            'Second World War' : 'Evil eagles',
-            'Cold War': 'F-15 Strike Eagles',
+            '    Roman' : 'Eagles',
+            '   Napoleonic' : 'Vive! l\'Em! p\'reur! More eagles',
+            '  Second World War' : 'Evil eagles',
+            ' Cold War': 'F-15 Strike Eagles',
             'Modern Era': 'Door-kickers. No eagles anymore except America...'
         }
     }
