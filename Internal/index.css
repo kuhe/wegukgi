@@ -1318,6 +1318,27 @@ a:active {
   line-height: 2em;
   height: 2em;
 }
+.baseball-link {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid grey;
+  display: inline-block;
+  -webkit-transform: skew(-9deg);
+  -moz-transform: skew(-9deg);
+  -o-transform: skew(-9deg);
+  width: auto;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 4px;
+  padding: 0 4px;
+  line-height: 1.4em;
+  height: 1.4em;
+}
 pre {
   text-align: left;
 }
