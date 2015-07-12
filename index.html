@@ -32,12 +32,12 @@
         <div class='resume row'>
             <h4>The Partially Correct Glossary of Terms (III Ed.)</h4>
             <div class='resume-container col-xs-12'>
-                <div class='pointer {{ pointer.cat }} depth{{ pointer.depth }}' ng-repeat='pointer in pointers'>
+                <div class='pointer {{ pointer.cat }} depth{{ pointer.depth }}' ng-repeat='pointer in pointers track by $index'>
                     <div>
                         {{ typeOf(pointer) == 'string' ? pointer : pointer.desc }}
                     </div>
                     <div class='topic-wrapper {{ pointer.cat }} depth{{ pointer.depth }}'
-                         ng-repeat='(k, v) in pointer'
+                         ng-repeat='(k, v) in pointer track by $index'
                          ng-if='metadata.indexOf(k) === -1'>
                         <div class='topic {{ pointer.cat }} depth{{ pointer.depth }}'
                              ng-click='navigate(pointer, v)'
