@@ -148,13 +148,13 @@ i {
 }
 .sprite {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
 }
 .icon-information {
@@ -173,13 +173,13 @@ i {
 }
 .icon-logo {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -26px -25px;
   width: 272px;
@@ -187,13 +187,13 @@ i {
 }
 .icon-radial-blue {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -192px -308px;
   width: 31px;
@@ -202,13 +202,13 @@ i {
 .icon-radial,
 .icon-radial-white {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -393px -33px;
   width: 42px;
@@ -271,13 +271,13 @@ i {
 }
 .icon-chevron-left-dark-grey {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -273px -118px;
   width: 17px;
@@ -341,13 +341,13 @@ i {
 }
 .icon-x {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -271px -83px;
   width: 26px;
@@ -361,13 +361,13 @@ i {
 }
 .icon-pinterest-grey {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -209px -174px;
   width: 33px;
@@ -375,13 +375,13 @@ i {
 }
 .icon-facebook-grey {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -252px -174px;
   width: 33px;
@@ -389,13 +389,13 @@ i {
 }
 .icon-twitter-grey {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -292px -174px;
   width: 33px;
@@ -403,13 +403,13 @@ i {
 }
 .icon-email-grey {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -333px -174px;
   width: 33px;
@@ -417,13 +417,13 @@ i {
 }
 .icon-pinterest {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -76px -171px;
   width: 39px;
@@ -431,13 +431,13 @@ i {
 }
 .icon-facebook {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -119px -170px;
   width: 39px;
@@ -445,13 +445,13 @@ i {
 }
 .icon-twitter {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -35px -171px;
   width: 39px;
@@ -459,13 +459,13 @@ i {
 }
 .icon-youtube {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -162px -171px;
   width: 39px;
@@ -479,13 +479,13 @@ i {
 }
 .icon-pocketwatch {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -29px -123px;
   width: 34px;
@@ -494,13 +494,13 @@ i {
 }
 .icon-pocketwatch-lg-lightgray {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -65px -117px;
   width: 40px;
@@ -508,13 +508,13 @@ i {
 }
 .icon-pocketwatch-sm-darkgray {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -115px -119px;
   width: 36px;
@@ -522,13 +522,13 @@ i {
 }
 .icon-magnifier-gray {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -319px -34px;
   width: 34px;
@@ -536,13 +536,13 @@ i {
 }
 .icon-magnifier-white {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -355px -33px;
   width: 35px;
@@ -550,13 +550,13 @@ i {
 }
 .icon-magnifier-sm {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -431px -178px;
   width: 24px;
@@ -564,13 +564,13 @@ i {
 }
 .icon-dropdown {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -34px -70px;
   width: 22px;
@@ -578,13 +578,13 @@ i {
 }
 .icon-gallery {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -33px -95px;
   width: 23px;
@@ -592,13 +592,13 @@ i {
 }
 .icon-arrow-left {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -60px -88px;
   width: 24px;
@@ -606,13 +606,13 @@ i {
 }
 .icon-star-blue {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -88px -85px;
   width: 22px;
@@ -620,13 +620,13 @@ i {
 }
 .icon-star-gray {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -114px -85px;
   width: 22px;
@@ -634,13 +634,13 @@ i {
 }
 .icon-ipad {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -163px -74px;
   width: 54px;
@@ -648,13 +648,13 @@ i {
 }
 .icon-caret-right {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -250px -83px;
   width: 12px;
@@ -662,13 +662,13 @@ i {
 }
 .icon-x-lg-white {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -305px -82px;
   width: 26px;
@@ -676,13 +676,13 @@ i {
 }
 .icon-triangle-up {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -337px -79px;
   width: 14px;
@@ -690,13 +690,13 @@ i {
 }
 .icon-triangle-down {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -350px -79px;
   width: 14px;
@@ -704,13 +704,13 @@ i {
 }
 .icon-video {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -224px -120px;
   width: 35px;
@@ -718,13 +718,13 @@ i {
 }
 .icon-x-sm-white {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -229px -146px;
   width: 19px;
@@ -732,13 +732,13 @@ i {
 }
 .icon-caret-double-right {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -299px -117px;
   width: 19px;
@@ -746,13 +746,13 @@ i {
 }
 .icon-caret-left-lightgray {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -322px -117px;
   width: 18px;
@@ -760,13 +760,13 @@ i {
 }
 .icon-apple {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -352px -96px;
   width: 42px;
@@ -774,13 +774,13 @@ i {
 }
 .icon-android {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -398px -101px;
   width: 47px;
@@ -788,13 +788,13 @@ i {
 }
 .icon-arrow-right-circle {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -374px -178px;
   width: 26px;
@@ -802,13 +802,13 @@ i {
 }
 .icon-trashcan {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -405px -177px;
   width: 21px;
@@ -816,13 +816,13 @@ i {
 }
 .icon-rectangle-gray {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -36px -231px;
   width: 153px;
@@ -830,13 +830,13 @@ i {
 }
 .icon-rectangle-blue {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -36px -266px;
   width: 153px;
@@ -844,13 +844,13 @@ i {
 }
 .icon-bookmark-blue {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -199px -222px;
   width: 28px;
@@ -858,13 +858,13 @@ i {
 }
 .icon-bookmark-red {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -229px -222px;
   width: 28px;
@@ -872,13 +872,13 @@ i {
 }
 .icon-checkmark {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -269px -225px;
   width: 21px;
@@ -886,13 +886,13 @@ i {
 }
 .icon-dot-blue {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -269px -255px;
   width: 21px;
@@ -900,13 +900,13 @@ i {
 }
 .icon-square-blue {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -301px -224px;
   width: 44px;
@@ -914,13 +914,13 @@ i {
 }
 .icon-square-triangle-right {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -353px -230px;
   width: 33px;
@@ -928,13 +928,13 @@ i {
 }
 .icon-papers {
   background-image: url('/static/images/sprite.png');
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   display: inline-block;
   background-position: -465px -11px;
   width: 291px;
@@ -1108,13 +1108,13 @@ li {
   user-select: none;
 }
 button {
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 .la-menu {
   overflow-y: scroll!important;
@@ -1168,13 +1168,13 @@ a:visited,
 a:active {
   text-decoration: inherit;
   color: inherit;
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 .timepiece .minutes,
 .timepiece .seconds {
@@ -1191,13 +1191,13 @@ a:active {
 [ng-click],
 [data-ng-click],
 [x-ng-click] {
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 .standard-width {
   width: 1200px;
@@ -1242,6 +1242,25 @@ a:active {
 * {
   transition: all 0.25s ease;
 }
+.button {
+  cursor: pointer;
+}
+h4 {
+  margin-bottom: 1em;
+  color: white;
+}
+hr {
+  background: #767676;
+  height: 2.4em;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  margin: 0 0 2.2em;
+}
+.row {
+  padding-bottom: 25px;
+}
 .resume-container {
   margin: 20px 0;
   padding: 10px 20px;
@@ -1279,13 +1298,13 @@ a:active {
   display: block;
 }
 .resume-container .topic {
-  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
   border: 1px solid grey;
   display: inline-block;
   -webkit-transform: skew(-9deg);
@@ -1318,19 +1337,19 @@ a:active {
   line-height: 2em;
   height: 2em;
 }
-.baseball-link {
-  cursor: pointer;
+.baseball-link,
+a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 1px solid grey;
+  cursor: pointer;
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
   display: inline-block;
-  -webkit-transform: skew(-9deg);
-  -moz-transform: skew(-9deg);
-  -o-transform: skew(-9deg);
   width: auto;
   text-align: center;
   font-size: 16px;
