@@ -29,8 +29,13 @@ Namespace.IndexController = function($scope) { (function() {
             while (pointers.length > 1 + parent.depth) pointers.pop();
         }
         if (typeof child == 'object') {
-            pointers[child.depth] = child;
-            while (pointers.length > 1 + child.depth) pointers.pop();
+            console.log(parent, child);
+            if (parent.cat.slice(-9) == 'Recursion') {
+                pointers.push(parent);
+            } else {
+                pointers[child.depth] = child;
+                while (pointers.length > 1 + child.depth) pointers.pop();
+            }
         }
     };
 }).bind($scope)()};

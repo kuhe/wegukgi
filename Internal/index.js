@@ -30,7 +30,10 @@ Namespace.topics = {
             'Garbage Collection' : 'Vital cornerstone of modern civilization and high level languages.',
             'Compiler Optimizations' : 'You could say that I trust you implicitly.',
             'Prim\'s Tree' : 'Annexation of the weakest neighboring countries one at a time',
-            'Kruskal\'s Tree' : 'MST via union find'
+            'Kruskal\'s Tree' : 'MST via union find',
+            'Kadane\'s Subarray': 'Max ending here and max so far',
+            'Binary Search': 'Available as a consequence of an ordering',
+            '' : ''
         },
         'Data and its Structures' : {
             desc: '',
@@ -42,14 +45,16 @@ Namespace.topics = {
             'Unlinked List' : 'Well... Uh...',
             'Array' : {
                 'desc' : 'A battery of cannon placed in series.',
-                'C++' : 'Some kind of mythical engine for vectors that I\'ve never seen directly',
+                'C++' : 'Some kind of mythical engine for vectors that I\'ve never seen directly. Actually just a pointer and an optimistic outlook ' +
+                        'that the contiguous memory addresses are your buddies. ' +
+                        'Friendly segfault indicates when you\'ve just gone too far.',
                 'PHP' : 'Swiss army hammer of collection types.',
                 'Python' : 'Is Pepsi okay?',
-                'C#' : 'An actual array, so you\'re probably looking for a list.',
-                'JavaScript' : 'Where arrays and functions can have secret string keys because they\'re all objects.'
+                'C#' : 'An actual array, so you\'re probably looking for an arraylist.',
+                'JavaScript' : 'Where arrays and functions can have secret string keys because they\'re all objects, which are all dictionaries.'
             },
             'ArrayList' : {
-                'desc' : 'An array that resizes itself.'
+                'desc' : 'A list implemented with arrays. Or... is it an array implemented with lists!? No, of course not. It\'s the former.'
             },
             'Hash Table' : {
                 'desc' : 'The basis of cache keying, and the world economy.',
@@ -60,13 +65,13 @@ Namespace.topics = {
                 'JavaScript' : 'Any and every object, including arrays & functions.'
             },
             'Stack' : 'Last on, first off. Also stack memory: faster access than the heap, exemplified by functional scope. You\'re in' +
-            'a function within a function, Leo!',
+                        'a function within a function, Leo!',
             'Queue' : '(British) First come first serve.',
             'Graph' : 'A visual diagram describing the massive loss of revenue suffered due to your programming errors.',
             'Tree' : {
                 'desc' : 'A graph with a root and no circular paths.',
                 'Heap' : 'Ordered along any path. Also heap memory: when you just dump your stuff in a pile but remember where' +
-                'everything is.',
+                        'everything is.',
                 'Binary Search Tree' : 'Left is the opposite of right.',
                 'Rotation': 'Dmitry Medvedev becomes President of Russia.'
             }
@@ -93,14 +98,22 @@ Namespace.topics = {
             'Liskov substitution' : 'Children should be able to replace their parents after 20 years of hard schooling.',
             'Singleton' : 'The same turtle all the way down.',
             'Decorator' : 'Kinda like a wrapper. Modifies functions.',
-            'Encapsulation' : 'You can\'t always get what you want.',
+            'Encapsulation' : 'You can\'t always get what you want. Directly, anyway.',
             '(web) Front Controller' : 'Run, application, run.',
             'REST Service' : 'Why PUT when you can PATCH?',
             'Asynchronicity' : 'Doing things synchronously, the hard way.',
             'Model View Controller' : 'And 3 million service factories',
             'Dependency Injection' : 'I need a thing that can do ...',
             'Test' : 'Who tests the testers?',
-            'Bitwise XOR' : '^_^ flipping burgers for a living'
+            'Bitwise XOR' : '^_^ flipping burgers for a living',
+            'Recursion' : {
+                'desc': 'Best pals with stack overflow',
+                'Recursion': {
+                    'Recursion': {
+                        'Recursion': ''
+                    }
+                }
+            }
         },
         'Object Orientation' : {
             'desc' : 'The organizing of concepts into classes whose names end with FactoryFactory',
@@ -130,6 +143,7 @@ Namespace.topics = {
             'AngularJS' : 'RAD SPA, really like the binding and model',
             'Node.js' : 'Build your JavaScript in your own home! Also the handy npm.',
             'Backbone' : 'Erm... not too familiar. Not a fan of central event buses I sometimes see with backbone. '
+
         },
         'Python' : {
             'desc' : 'Generators, list comprehensions and Multi-threa--- I mean processing',
@@ -140,7 +154,7 @@ Namespace.topics = {
             '.NET' : 'All said a really nice bundle of tools. Damn your method capitalization though.'
         },
         'Java' : {
-            desc : 'All the XML you can eat, and then some.',
+            desc : 'A language written mostly in XML.',
             'Spring' : 'I know nothing about this.',
             'Maven' : 'I know nothing about this.',
             'Scala' : 'I know nothing about this.'
@@ -243,8 +257,13 @@ Namespace.IndexController = function($scope) { (function() {
             while (pointers.length > 1 + parent.depth) pointers.pop();
         }
         if (typeof child == 'object') {
-            pointers[child.depth] = child;
-            while (pointers.length > 1 + child.depth) pointers.pop();
+            console.log(parent, child);
+            if (parent.cat.slice(-9) == 'Recursion') {
+                pointers.push(parent);
+            } else {
+                pointers[child.depth] = child;
+                while (pointers.length > 1 + child.depth) pointers.pop();
+            }
         }
     };
 }).bind($scope)()};
