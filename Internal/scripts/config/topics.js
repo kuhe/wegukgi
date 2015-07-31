@@ -153,7 +153,7 @@ Namespace.topics = {
             '.NET' : 'All said a really nice bundle of tools. Damn your method capitalization though.'
         },
         'Java' : {
-            desc : 'A language written mostly in XML.',
+            desc : 'A language written mostly in XML. Correction, a language written mostly with annotations.',
             'Spring' : 'I know nothing about this.',
             'Maven' : 'I know nothing about this.',
             'Scala' : 'I know nothing about this.'
